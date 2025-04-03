@@ -1,4 +1,4 @@
-import UnitConverter from '../UnitConverter'; 
+import UnitConverter from '../src/UnitConverter'; 
 
 export default function Page() {
   return (
