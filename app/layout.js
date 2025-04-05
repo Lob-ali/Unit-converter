@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link"; // Import Link for navigation
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,11 +20,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+
+        {/* Footer Section */}
+        <footer style={{ marginTop: "20px", textAlign: "center" }}>
+          <div>
+            <p>&copy; 2025 Unit Converter. All Rights Reserved.</p>
+            <p>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
 }
+
